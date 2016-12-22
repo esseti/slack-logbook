@@ -1,8 +1,7 @@
 # SLACK LOGBOOK
-The goal is to log your work in a spreadsheet using a [slash command of slack](https://api.slack.com/slash-commands). For example, we use `/alfred log my work | 8` where
+The goal is to log your work in a spreadsheet using a [slash command of slack](https://api.slack.com/slash-commands). For example, we use `/ambrogio  my work | 8` where
 
-- `alfred` is the name of the command (thanks batman)
-- `log` is the action. We have other actions, in this repo you just find `log`
+- `ambrogio` is the name of the command (from a famous ads from Italy. )
 - `log my work` is what you write as entry to be logged in a spreadsheet
 - `|` delimiter (I haven't found an easier way for this)
 - `8` a vote on your productivity. It's useful to have a quick look at your day later on.
