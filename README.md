@@ -33,7 +33,7 @@ This code is made for Google App Engine (GAE). I chose GAE beacuse:
 - Copy the SpreedsheetId from the url (something like a code, eg `15I7Ipbt........fEissA`) and set it in the configuration file (`cfg.py` - see Configuration paragraph).
 - Go to slack and enable a command a `slash command` https://my.slack.com/services/new/slash-commands
 
-    - name: whatever you want to call it, we use ~`alfred`~ `ambrogio`
+    - name: whatever you want to call it, we use `ambrogio`
     - url: your GAE url, smt like `https://slack-logbook....appspot.com/`
     - method: `POST`
     - token: whatever is there, *COPY IT*
