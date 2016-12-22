@@ -26,14 +26,14 @@ This code is made for Google App Engine (GAE). I chose GAE beacuse:
 - Create a GAE app [here](https://console.cloud.google.com/appengine)
 - install library `pip install --upgrade  -t lib/ google-api-python-client` and `pip install --upgrade -t lib/ httplib2`
 - Set in the `app.yaml` file your application name `application: <HERE>`.
-- Enable API for spreadsheet: https://console.developers.google.com/apis/api/sheets.googleapis.com/overview (click on the enable button)
+- Enable API for spreadsheet (in the API page)
 - In the AMI - Credentials, note down the email of the system, it should be `..appname@developer.appspot..` or something like that
 - Create a spreadsheet in your GDrive, and share with the email that you noted from previous step.
 - Add as the first row `DATE, MESSAGE, VOTE` as 3 columns. And as second row `2016-01-01, Dummy, 0` in the three columns. (this is needed for the initialization)
-- Copy the SpreedsheetId from the url `15I7Ipbt........fEissA` and set it in the configuration file (`cfg.py` - see Configuration paragraph).
+- Copy the SpreedsheetId from the url (something like a code, eg `15I7Ipbt........fEissA`) and set it in the configuration file (`cfg.py` - see Configuration paragraph).
 - Go to slack and enable a command a `slash command` https://my.slack.com/services/new/slash-commands
 
-    - name: whatever you want to call it, we use `alfred`
+    - name: whatever you want to call it, we use ~`alfred`~ `ambrogio`
     - url: your GAE url, smt like `https://slack-logbook....appspot.com/`
     - method: `POST`
     - token: whatever is there, *COPY IT*
