@@ -46,9 +46,9 @@ This code is made for Google App Engine (GAE). I chose GAE beacuse:
 
 ### Configuration
 
- - SHEET_ID: the spreedsheet id from the url
+ - SHEET_ID: the spreadsheet id from the url
  - TOKEN: slack slash command token, to auth the calls
- - INCOMING_WH: a valid slash incoming webhook, to send notifications. [create here](https://my.slack.com/services/new/incoming-webhook/), copy the link (or you acn use an existing one).
+ - INCOMING_WH: a valid slash incoming webhook, to send notifications. [create here](https://my.slack.com/services/new/incoming-webhook/), copy the link (or you can use an existing one).
  - USERS: list of users by their usernames. NOTE: you must have a spreadsheet page for each user named with their name.
  - ICON: the icon of the bot.
  - USERNAME: the username that will be displayed
