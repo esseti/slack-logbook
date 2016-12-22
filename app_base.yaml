@@ -1,0 +1,30 @@
+application: REPLACEME
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /dr
+  script: reminder.app
+  login: admin
+- url: /nd
+  script: reminder.app
+  login: admin
+- url: .*
+  script: logbook.app
+- url: /_ah/queue/deferred
+  script: google.appengine.ext.deferred.deferred.application
+  login: admin
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: ssl
+  version: latest
+
+builtins:
+- deferred: on

@@ -1,0 +1,9 @@
+cron:
+  - description: "daily reminder"
+    url: /dr
+    schedule: every mon,tue,wed,thu,fri 10:00
+    timezone: Europe/Rome
+  - description: "next day"
+    url: /nd
+    schedule: every day 3:05
+    timezone: Europe/Rome
