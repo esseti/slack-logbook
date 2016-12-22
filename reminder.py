@@ -38,18 +38,22 @@ class ReminderHandler(webapp2.RequestHandler):
         Returns:
 
         '''
-        payload = json.dumps({
-            "channel": '@'+channel,
-            "username": USERNAME,
-            "icon_emoji": ICON,
-            "color": "good",
-            "title": "Hi %s its time to log your work" % channel,
-        })
 
-        r = urlfetch.fetch(url=INCOMING_WH,
-                           payload=payload,
-                           method=urlfetch.POST,headers={"Content-Type": 'application/json'})
-        return True
+        today = datetime.now().date()
+        #avoids it during the weekend
+        if today.weekday()<5:
+            payload = json.dumps({
+                "channel": '@'+channel,
+                "username": USERNAME,
+                "icon_emoji": ICON,
+                "color": "good",
+                "title": "Hi %s its time to log your work" % channel,
+            })
+
+            r = urlfetch.fetch(url=INCOMING_WH,
+                               payload=payload,
+                               method=urlfetch.POST,headers={"Content-Type": 'application/json'})
+            return True
 
     def get(self):
         '''

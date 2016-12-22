@@ -2,9 +2,13 @@
 The goal is to log your work in a spreadsheet using a [slash command of slack](https://api.slack.com/slash-commands). For example, we use `/ambrogio  my work | 8` where
 
 - `ambrogio` is the name of the command (from a famous ads from Italy. )
-- `log my work` is what you write as entry to be logged in a spreadsheet
+- `my work` is what you write as entry to be logged in a spreadsheet
 - `|` delimiter (I haven't found an easier way for this)
 - `8` a vote on your productivity. It's useful to have a quick look at your day later on.
+
+This command will add a row in a spreadsheet on google docs with the date of yesterda, the message and the vote.
+
+Every day it sends a reminder to the people listed in the configuration. (TODO: this should be avoided during weekend). Everyday, if the log of yesterday is missed, it adds one automatically, just to fill in everyday of the year.
 
 ##NOTE
 
